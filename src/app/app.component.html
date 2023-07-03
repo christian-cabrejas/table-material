@@ -1,3 +1,26 @@
 <main>
-  <app-table-showcase-page></app-table-showcase-page>
+  <mat-toolbar>
+    <button mat-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-drawer-container class="sidenav">
+    <mat-drawer mode="side" opened>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <button mat-button routerLink="table1">
+            datos 1
+          </button>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <button mat-button routerLink="json">
+             Json
+          </button>
+        </mat-list-item>
+      </mat-list>     
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
 </main>
